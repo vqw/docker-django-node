@@ -5,6 +5,7 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update
 RUN apt-get install -y npm libpq-dev nodejs-legacy
 RUN npm install -g bower
+RUN pip install django==1.9.4 psycopg2 django-bower==5.1.0
 
 
 
