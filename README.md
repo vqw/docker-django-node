@@ -5,9 +5,12 @@
 - nginx
 - supervisord 
 
-# build & upload
+# using this docker image
+
 
 ```
-docker build -t nberserk/my-django:latest .
-docker push nberserk/my-django
+from nberserk/docker-django-angular2:latest
+
+# add your docker command here
+
 ```
