@@ -45,5 +45,5 @@ RUN set -ex \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
 
-RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev nginx supervisor vim && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends libmysqlclient-dev nginx supervisor vim && rm -rf /var/lib/apt/lists/*
 RUN pip install django==1.9.4 psycopg2 django-bower==5.1.0 django-bootstrap3==7.0.1
