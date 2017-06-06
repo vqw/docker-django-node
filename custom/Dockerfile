@@ -1,4 +1,4 @@
-FROM python:2.7.13
+FROM python:3.6.1
 
 #RUN groupadd --gid 1000 node && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
@@ -19,7 +19,7 @@ FROM python:2.7.13
 #   done
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 7.7.3
+ENV NODE_VERSION 8.0.0
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
@@ -46,4 +46,4 @@ RUN set -ex \
   && chmod +x /usr/local/bin/yarn
 
 RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev nginx supervisor vim && rm -rf /var/lib/apt/lists/*
-RUN pip install django==1.9.4 psycopg2 django-bower==5.1.0 django-bootstrap3==7.0.1
+RUN pip install django==1.11 psycopg2
